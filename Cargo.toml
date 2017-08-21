@@ -1,0 +1,6 @@
+[package]
+name = "temenos-identity"
+version = "0.1.0"
+authors = ["pcummuskey <pcummuskey@bravurasolutions.com>"]
+
+[dependencies]
