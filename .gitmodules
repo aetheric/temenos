@@ -1,0 +1,4 @@
+[submodule "identity"]
+	path   = temenos-identity
+	url    = https://github.com/aetheric/temenos-identity.git
+	branch = master
