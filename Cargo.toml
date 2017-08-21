@@ -1,6 +1,13 @@
 [package]
-name = "temenos-identity"
+name    = "temenos-identity"
 version = "0.1.0"
-authors = ["pcummuskey <pcummuskey@bravurasolutions.com>"]
+authors = [ "pcummuskey <peterc@aetheric.co.nz>" ]
+build   = "build.rs"
+
+[build-dependencies]
+kafka       = "*"
+openssl     = "*"
+protoc-rust = "*"
 
 [dependencies]
+protoc = "*"
