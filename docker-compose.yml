@@ -1,7 +1,29 @@
 version: '3.2'
 
+volumes:
+  neo4j: {}
+
 services:
+
+  kafka:
+    image: wurstmeister/kafka:0.11.0.0
+    ports: [ 9094 ]
+    environment:
+      HOSTNAME_COMMAND: "route -n | awk '/UG[ \t]/{print $$2}'"
+
+  neo4j:
+    image: library/neo4j:3.2.3
+    ports: [ 7474, 7687 ]
+    volumes: [ "neo4j:/data:rw" ]
 
   identity:
     build:
       context: temenos-identity
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    links: [ kafka, neo4j ]
+    environment:
+      KAFKA_HOSTS: kafka
+      NEO4J_HOST:  neo4j:7687
