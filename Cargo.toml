@@ -7,13 +7,13 @@ build       = "build.rs"
 publish     = false
 readme      = "README.md"
 
-documentation = "https://aetheric.co.nz/temenos-identity"
+documentation = "https://aetheric.co.nz/temenos"
 homepage      = "https://aetheric.co.nz/temenos"
 repository    = "https://github.com/aetheric/temenos"
 
 [badges]
-travis-ci = { repository = "aetheric/temenos-identity", branch = "master" }
-coveralls = { repository = "aetheric/temenos-identity", branch = "master", service = "github" }
+travis-ci = { repository = "aetheric/temenos", branch = "identity" }
+coveralls = { repository = "aetheric/temenos", branch = "identity", service = "github" }
 
 [[bin]]
 name = "temenos-identity"
