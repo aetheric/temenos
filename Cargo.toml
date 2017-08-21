@@ -1,8 +1,23 @@
 [package]
-name    = "temenos-identity"
-version = "0.1.0"
-authors = [ "pcummuskey <peterc@aetheric.co.nz>" ]
-build   = "build.rs"
+name        = "temenos-identity"
+description = "Identity management for Temenos"
+version     = "0.1.0"
+authors     = [ "pcummuskey <peterc@aetheric.co.nz>" ]
+build       = "build.rs"
+publish     = false
+readme      = "README.md"
+
+documentation = "https://aetheric.co.nz/temenos-identity"
+homepage      = "https://aetheric.co.nz/temenos"
+repository    = "https://github.com/aetheric/temenos"
+
+[badges]
+travis-ci = { repository = "aetheric/temenos-identity", branch = "master" }
+coveralls = { repository = "aetheric/temenos-identity", branch = "master", service = "github" }
+
+[[bin]]
+name = "temenos-identity"
+path = "src/main.rs"
 
 [build-dependencies]
 kafka       = "*"

@@ -1,0 +1,16 @@
+dist: trusty
+sudo: required
+
+language: rust
+
+services:
+  - docker
+
+install:
+  - docker pull ekidd/rust-musl-builder
+
+script: "docker build
+    --tag aetheric/temenos-identity:latest"
+
+before_deploy:
+  - cargo doc --verbose
